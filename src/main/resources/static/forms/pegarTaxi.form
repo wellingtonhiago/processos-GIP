@@ -1,0 +1,58 @@
+{
+  "components": [
+    {
+      "label": "Dinheiro",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1b16gtd",
+        "columns": null
+      },
+      "id": "Field_19a6wfl",
+      "key": "dinheiro",
+      "description": "Quanto de dinheiro você precisa",
+      "validate": {
+        "pattern": "^(?:0|[1=9][0-9]*)\\.[0-9]+$",
+        "required": true
+      }
+    },
+    {
+      "label": "Para onde está indo?",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1qe9g7j",
+        "columns": null
+      },
+      "id": "Field_0a5n6ne",
+      "key": "local",
+      "description": "Loal para onde você quer ir",
+      "validate": {
+        "required": true
+      },
+      "properties": {}
+    },
+    {
+      "label": "Qual o preço do voo?",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_08f4ojy",
+        "columns": null
+      },
+      "id": "Field_0k86a9z",
+      "key": "passagem",
+      "description": "Valor da passagem aérea",
+      "validate": {
+        "pattern": "^(?:0|[1=9][0-9]*)\\.[0-9]+$",
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "pegarTaxi",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.12.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.19.0",
+  "schemaVersion": 9
+}
