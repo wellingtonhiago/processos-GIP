@@ -61,6 +61,7 @@
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_1azhjzv" sourceRef="Activity_0i5cap3" targetRef="Event_03jf1qz" />
     <bpmn:serviceTask id="Activity_0i5cap3" name="Desistindo da viagem" camunda:delegateExpression="#{feriasCanceladas}">
+      <bpmn:extensionElements />
       <bpmn:incoming>Flow_04pzwfz</bpmn:incoming>
       <bpmn:outgoing>Flow_1azhjzv</bpmn:outgoing>
     </bpmn:serviceTask>

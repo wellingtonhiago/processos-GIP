@@ -10,8 +10,8 @@ import javax.inject.Named;
 public class PrepararPartida implements JavaDelegate {
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
-        String estado = "Bahia";
-        String dinheiro = "1000.00";
+        String estado = (String) delegateExecution.getVariable("estado");
+        String dinheiro = (String) delegateExecution.getVariable("dinheiro");
 
         if (!estado.equalsIgnoreCase("Pernambuco") && !estado.equalsIgnoreCase("Alagoas")) {
             throw new BpmnError("erroEstadoInvalido", "Estado inválido: " + estado);
@@ -21,8 +21,6 @@ public class PrepararPartida implements JavaDelegate {
         if (valor < 500) {
             throw new BpmnError("erroDinheiroInsuficiente", "Dinheiro insuficiente: " + dinheiro);
         }
-
-        delegateExecution.setVariable("estado", estado);
-        delegateExecution.setVariable("dinheiro", dinheiro);
     }
 }
+
