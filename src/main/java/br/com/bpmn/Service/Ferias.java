@@ -11,7 +11,5 @@ public class Ferias implements JavaDelegate {
     public void execute(DelegateExecution delegateExecution) throws Exception {
         System.out.println("Tirando férias");
 
-        //tempo de duração de 5 segundos
-        Thread.sleep(5000);
     }
 }
